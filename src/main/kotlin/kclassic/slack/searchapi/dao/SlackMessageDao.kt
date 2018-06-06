@@ -11,6 +11,6 @@ class SlackMessageDao {
                 SlackMessage(message = "testing2", userName = "Pasha", timestamp = LocalDateTime.now())
         )
 
-        fun getMessageByMessageText(text: String) = data.filter { message -> message.message == text }
+        fun getMessageByMessageText(text: String, userName: String?) = data.filter { it.message == text && (userName == null || it.userName == userName) }
 
 }

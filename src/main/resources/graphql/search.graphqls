@@ -3,7 +3,7 @@ schema {
 }
 
 type Query {
-    search(query: String!): [SlackMessage]!
+    search(query: String!, userName: String): [SlackMessage]!
 }
 
 type SlackMessage {

@@ -8,5 +8,5 @@ import org.springframework.stereotype.Component
 class SearchGraphqlResolver(
         private val messageDao: SlackMessageDao
 ) : GraphQLQueryResolver {
-    fun search(query: String) = messageDao.getMessageByMessageText(query)
+    fun search(query: String, userName: String?) = messageDao.getMessageByMessageText(query, userName)
 }
