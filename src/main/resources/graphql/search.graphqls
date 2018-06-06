@@ -1,0 +1,13 @@
+schema {
+    query: Query
+}
+
+type Query {
+    search(query: String!): [SlackMessage]!
+}
+
+type SlackMessage {
+    userName: String!
+    message: String!
+    timestamp: String!
+}
