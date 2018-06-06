@@ -4,10 +4,13 @@ schema {
 
 type Query {
     search(query: String!, userName: String): [SlackMessage]!
+    #TODO figure out a better name
+    searchClose(channel: String!, timestamp: String!): [SlackMessage]
 }
 
 type SlackMessage {
     userName: String!
     message: String!
     timestamp: String!
+    channel: String!
 }

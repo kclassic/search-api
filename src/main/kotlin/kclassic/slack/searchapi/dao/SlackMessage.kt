@@ -5,5 +5,6 @@ import java.time.LocalDateTime
 data class SlackMessage(
         val message: String,
         val userName: String,
-        val timestamp: LocalDateTime
+        val timestamp: LocalDateTime,
+        val channel: String
 )
